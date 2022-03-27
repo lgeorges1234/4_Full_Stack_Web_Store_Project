@@ -1,0 +1,24 @@
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
+.item-image {
+    width: 100px;
+    border-radius: 10px;
+  }
+
+.cart-item-details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 80px;
+}
+  
+.select-input {
+  width: 60px;
+  border: none;
+  padding:6px;
+}

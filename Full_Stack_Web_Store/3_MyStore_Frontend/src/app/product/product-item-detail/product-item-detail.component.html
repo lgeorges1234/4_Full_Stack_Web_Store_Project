@@ -1,0 +1,11 @@
+<div class="detail-container">
+    <img src="{{ productItem.url }}" alt="{{ productItem.description }}" class="product-image">
+    <div class="detail-item">
+        <h3>{{ productItem.name }}</h3>
+        <h3>${{ productItem.price }}</h3>
+        <p>{{ productItem.description }}</p>
+        <app-add-to-cart-form [product]="productItem"></app-add-to-cart-form>
+        <a class="back-link" href="">➔ Back to product list</a>
+    </div>
+
+</div>
