@@ -1,1 +1,1 @@
-aws s3 cp --recursive --acl public-read ./dist s3://webstore-frontend/
+aws s3 cp --recursive ./dist s3://webstore-frontend/
