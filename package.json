@@ -1,0 +1,8 @@
+{
+    "scripts": {
+        "frontend:install": "cd 4_MyStore_Frontend && npm install",
+        "frontend:build": "cd 4_MyStore_Frontend && npm build",
+        "backend:install": "cd 4_MyStore_Backend && npm install",
+        "backend:build": "cd 4_MyStore_Backend && npm build"
+    }
+}
