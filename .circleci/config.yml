@@ -25,10 +25,10 @@ jobs:
           name: Back-End Build
           command: |
             npm run backend:build
-      - run:
-          name: Back-End Test
-          command: 
-            npm run backend:test    
+      # - run:
+      #     name: Back-End Test
+      #     command: 
+      #       npm run backend:test    
       #install, test, build and deploy the frontend app to S3
       - run:
           name: Front-End Install
