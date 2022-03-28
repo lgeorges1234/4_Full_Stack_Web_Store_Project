@@ -13,7 +13,7 @@ jobs:
       - checkout
       - aws-cli/setup
       - aws-elastic-beanstalk/setup
-      - browser-tools/install-chrome
+      - browser-tools/install-chrome:chrome-version: 92.0.4515.107
       #install, build, test and deploy the backend app to Elastik Beanstalk
       - run:
           name: Back-End Install
