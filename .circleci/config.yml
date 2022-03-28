@@ -9,7 +9,7 @@ jobs:
     docker:
       - image: "cimg/base:stable"
         environment:
-          CHROME_BIN=/usr/bin/google-chrome karma start --single-run
+          CHROME_BIN=/usr/bin/google-chrome
     steps:
       - node/install
       - checkout
