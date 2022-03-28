@@ -11,10 +11,7 @@ jobs:
       - node/install
       - checkout
       - aws-cli/setup
-      - aws-elastic-beanstalk/setup
-      - run:
-          command: env | grep CHROME_BIN
-          name: set CHROME_BIN     
+      - aws-elastic-beanstalk/setup  
       #install, build, test and deploy the backend app to Elastik Beanstalk
       - run:
           name: Back-End Install
