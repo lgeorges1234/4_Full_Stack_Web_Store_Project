@@ -8,8 +8,8 @@ jobs:
   build:
     docker:
       - image: "cimg/base:stable"
-        environment:
-          CHROME_BIN=/usr/bin/google-chrome
+        # environment:
+        #   CHROME_BIN=/usr/bin/google-chrome
     steps:
       - node/install
       - checkout
@@ -21,19 +21,23 @@ jobs:
           name: Back-End Install
           command: |
             npm run backend:install
-      #install, test, build and deploy the frontend app to S3
       - run:
           name: Back-End Build
           command: |
             npm run backend:build
       - run:
+          name: Back-End Test
+          command: 
+            npm run backend:test    
+      #install, test, build and deploy the frontend app to S3
+      - run:
           name: Front-End Install
           command: |
             npm run frontend:install
-      # - run:
-      #     name: Front-End Test
-      #     command: |
-      #       npm run frontend:test      
+      - run:
+          name: Front-End Test
+          command: |
+            npm run frontend:test      
       - run:
           name: Front-End Build
           command: |
