@@ -1,9 +1,11 @@
 {
     "scripts": {
-        "frontend:install": "cd 4_MyStore_Frontend && npm install",
-        "frontend:build": "cd 4_MyStore_Frontend && npm run build",
-        "frontend:deploy": "cd 4_MyStore_Frontend && npm run deploy",
         "backend:install": "cd 4_MyStore_Backend && npm install",
-        "backend:build": "cd 4_MyStore_Backend && npm run build"
+        "backend:build": "cd 4_MyStore_Backend && npm run build",
+        "backend:test": "cd 4_MyStore_Backend && npm run jasmine",
+        "frontend:install": "cd 4_MyStore_Frontend && npm install",
+        "frontend:test": "cd 4_MyStore_Frontend && npm run test",
+        "frontend:build": "cd 4_MyStore_Frontend && npm run build",
+        "frontend:deploy": "cd 4_MyStore_Frontend && npm run deploy"
     }
 }

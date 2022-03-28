@@ -10,7 +10,6 @@ import { Product } from 'src/app/model/Product';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  title: string = 'Products';
   productsList: Product[] = [];
   constructor(private productsService: ProductsService) { }
 
