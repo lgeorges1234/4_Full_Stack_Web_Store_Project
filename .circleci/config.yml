@@ -7,6 +7,8 @@ jobs:
   build:
     docker:
       - image: "cimg/base:stable"
+        environment:
+          CHROME_BIN=/usr/bin/google-chrome karma start --single-run
     steps:
       - node/install
       - checkout
@@ -26,10 +28,10 @@ jobs:
           name: Front-End Install
           command: |
             npm run frontend:install
-      # - run:
-      #     name: Front-End Test
-      #     command: |
-      #       npm run frontend:test      
+      - run:
+          name: Front-End Test
+          command: |
+            npm run frontend:test      
       - run:
           name: Front-End Build
           command: |
