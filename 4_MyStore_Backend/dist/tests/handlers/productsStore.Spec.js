@@ -75,10 +75,12 @@ describe('productsRoutes', () => {
                 id: createResponse.body.id,
                 name: product.name,
                 price: product.price,
+                url: product.url,
+                description: product.description,
                 category: product.category,
             });
         });
-        it('correct product settings with no jwt token should return an error', async () => {
+        xit('correct product settings with no jwt token should return an error', async () => {
             const createErrorResponse = await request
                 .post('/products')
                 .send(product)
