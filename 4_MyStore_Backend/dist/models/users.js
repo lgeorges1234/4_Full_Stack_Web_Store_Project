@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserStore = void 0;
 /* eslint-disable class-methods-use-this */
-const bcrypt_1 = __importDefault(require("bcrypt"));
+const bcryptjs_1 = __importDefault(require("bcryptjs"));
 const database_1 = __importDefault(require("../database"));
 const saltRounds = process.env.SALT_ROUNDS;
 const pepper = process.env.BCRYPT_PASSWORD;
@@ -38,7 +38,7 @@ class UserStore {
         try {
             const sql = 'INSERT INTO users (firstname, lastname, password_digest) VALUES($1, $2, $3) RETURNING *';
             const conn = await database_1.default.connect();
-            const hash = bcrypt_1.default.hashSync(user.password_digest + pepper, parseInt(saltRounds, 10));
+            const hash = bcryptjs_1.default.hashSync(user.password_digest + pepper, parseInt(saltRounds, 10));
             const result = await conn.query(sql, [
                 user.firstname,
                 user.lastname,
@@ -57,7 +57,7 @@ class UserStore {
         const result = await conn.query(sql, [user.lastname]);
         conn.release();
         if (result.rows.length) {
-            if (bcrypt_1.default.compareSync(user.password_digest + pepper, result.rows[0].password_digest)) {
+            if (bcryptjs_1.default.compareSync(user.password_digest + pepper, result.rows[0].password_digest)) {
                 return result.rows[0];
             }
             throw new Error(`Authentication of  ${user.lastname} has not succeed.`);

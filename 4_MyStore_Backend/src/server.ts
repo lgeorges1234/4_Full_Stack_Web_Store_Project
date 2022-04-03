@@ -6,7 +6,7 @@ import usersRoutes from './handlers/usersStore';
 import dashboardRoutes from './handlers/dasboardStore';
 
 const app: express.Application = express();
-const address: string = '127.0.0.1:3000';
+const address: string = '127.0.0.1:8080';
 
 app.use(bodyParser.json());
 
@@ -19,7 +19,7 @@ productsRoutes(app);
 usersRoutes(app);
 dashboardRoutes(app);
 
-app.listen(3000, () => {
+app.listen(8080, () => {
   console.log(`starting app on: ${address}`);
 });
 

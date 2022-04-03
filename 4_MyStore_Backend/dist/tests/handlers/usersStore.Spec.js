@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* eslint-disable no-unused-expressions */
 /* eslint-disable import/no-extraneous-dependencies */
 const supertest_1 = __importDefault(require("supertest"));
-const bcrypt_1 = __importDefault(require("bcrypt"));
+const bcryptjs_1 = __importDefault(require("bcryptjs"));
 const server_1 = __importDefault(require("../../server"));
 const request = (0, supertest_1.default)(server_1.default);
 const pepper = process.env.BCRYPT_PASSWORD;
@@ -88,7 +88,7 @@ describe('usersRoutes', () => {
             expect(showResponse.body.id).toEqual(indexResponse.body[0].id);
             expect(showResponse.body.firstname).toEqual(user.firstname);
             expect(showResponse.body.lastname).toEqual(user.lastname);
-            expect(bcrypt_1.default.compareSync(user.password_digest + pepper, showResponse.body.password_digest)).toBeTruthy;
+            expect(bcryptjs_1.default.compareSync(user.password_digest + pepper, showResponse.body.password_digest)).toBeTruthy;
         });
     });
     describe('AUTHENTICATE POST /users/authenticate', () => {

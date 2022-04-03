@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable import/no-extraneous-dependencies */
 import supertest from 'supertest';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import { User } from '../../models/users';
 import app from '../../server';
 

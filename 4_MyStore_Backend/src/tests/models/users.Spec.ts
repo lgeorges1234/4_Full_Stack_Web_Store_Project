@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-expressions */
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import { User, UserStore } from '../../models/users';
 
 const pepper = process.env.BCRYPT_PASSWORD as string;

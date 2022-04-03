@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import client from '../database';
 
 const saltRounds = process.env.SALT_ROUNDS;

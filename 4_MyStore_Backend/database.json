@@ -1,18 +1,16 @@
 {
     "dev": {
         "driver": "pg",
-        "host": "127.0.0.1",
+        "host": "mystorebdd.cffh2rvpabq7.eu-west-3.rds.amazonaws.com",
         "database": "shopping_dev",
         "user": "shopping_user",
-        "password": "cheeseball",
-        "port": "5000"
+        "password": "cheeseball"
     },
     "test": {
         "driver": "pg",
-        "host": "127.0.0.1",
+        "host": "mystorebdd.cffh2rvpabq7.eu-west-3.rds.amazonaws.com",
         "database": "shopping_test",
         "user": "shopping_tester",
-        "password": "cheesemaster",
-        "port": "5000"
+        "password": "cheesemaster"
     }
 }
