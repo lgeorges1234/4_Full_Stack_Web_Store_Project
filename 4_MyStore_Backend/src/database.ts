@@ -20,6 +20,7 @@ let client: Pool = new Pool();
 console.log(`ENV var: ${ENV}`);
 
 if (ENV === 'test') {
+  console.log(POSTGRES_DB_TEST)
   client = new Pool({
     host: POSTGRES_HOST_TEST,
     database: POSTGRES_DB_TEST,
