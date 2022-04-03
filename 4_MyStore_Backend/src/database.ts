@@ -18,6 +18,8 @@ const {
 // eslint-disable-next-line import/no-mutable-exports
 let client: Pool = new Pool();
 console.log(`ENV var: ${ENV}`);
+console.log(`POSTGRE_DB_TEST: ${POSTGRES_DB_TEST}`)
+console.log(`POSTGRE_DB_DEV: ${POSTGRES_DB_DEV}`)
 
 if (ENV === 'test') {
   console.log(`POSTGRE_DB_TEST: ${POSTGRES_DB_TEST}`)
