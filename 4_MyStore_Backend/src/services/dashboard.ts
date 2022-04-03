@@ -7,6 +7,7 @@ export class DasboardQueries {
     { name: string; category: string; volume: string; orders_placed: string }[]
   > {
     try {
+      console.log(`client: ${JSON.stringify(client)}`)
       const conn = await client.connect();
       const sql =
         'SELECT p.name, p.category, SUM(op.quantity) volume,COUNT(op.order_id) orders_placed FROM (products p INNER JOIN order_products op ON p.id=op.product_id) GROUP BY p.id ORDER BY volume DESC LIMIT 5';
