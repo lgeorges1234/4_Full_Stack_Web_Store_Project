@@ -17,7 +17,7 @@ let indexProductResult;
 let userId;
 let orderId;
 let productId;
-describe('Dashboard queries', () => {
+xdescribe('Dashboard queries', () => {
     beforeAll(async () => {
         const user = {
             firstname: 'Robert',

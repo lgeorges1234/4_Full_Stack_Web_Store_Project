@@ -20,7 +20,7 @@ let orderId: number;
 let productId: number;
 let token: string;
 
-describe('DashboardRoutes', () => {
+xdescribe('DashboardRoutes', () => {
   beforeAll(async () => {
     const user = {
       firstname: 'Brad',
