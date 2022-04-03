@@ -10,7 +10,6 @@ const database_1 = __importDefault(require("../database"));
 class DasboardQueries {
     async fiveMostWanted() {
         try {
-            console.log(`client: ${JSON.stringify(database_1.default)}`);
             const conn = await database_1.default.connect();
             const sql = 'SELECT p.name, p.category, SUM(op.quantity) volume,COUNT(op.order_id) orders_placed FROM (products p INNER JOIN order_products op ON p.id=op.product_id) GROUP BY p.id ORDER BY volume DESC LIMIT 5';
             const result = await conn.query(sql);
