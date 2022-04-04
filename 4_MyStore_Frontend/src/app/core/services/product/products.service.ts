@@ -15,13 +15,8 @@ export class ProductsService {
 
   constructor(private http: HttpClient) { }
 
-  getInitProductsList(): Observable<void> {
-    return this.http.get<Product[]>(this._jsonURL).pipe(
-      map(products => { 
-        alert(products)
-        for(let i=0; i<products.length; i++) this.createProducts(products[i])
-      })
-    )
+  getInitProductsList(): Observable<Product[]> {
+    return this.http.get<Product[]>(this._jsonURL)
   }
 
   createProducts(product: Product): Observable<Product[]> {
@@ -29,6 +24,7 @@ export class ProductsService {
       'Content-Type': 'application/json',
       'Cache-Control': 'no-cache'
     });
+    alert(`Product created: ${product}`)
     return this.http.post<Product[]>(this._productUrl, product, { headers: httpHeaders })
   }
 
