@@ -11,7 +11,7 @@
     "clean": "rm -rf dist/ || true",
     "start": "node ./dist/server.js",
     "watch": "tsc-watch --esModuleInterop src/server.ts --outDir ./dist --onSuccess \"node ./dist/server.js\"",
-    "jasmine": "cross-env ENV=test&& db-migrate --env test down -c 4 && db-migrate --env test up && jasmine-ts && db-migrate db:drop test && db-migrate --env test down -c 4",
+    "jasmine": "cross-env ENV=test db-migrate --env test down -c 4 && db-migrate --env test up && jasmine-ts && db-migrate db:drop test && db-migrate --env test down -c 4",
     "build": "npx tsc",
     "test": "npm run build && npm run jasmine",
     "deploy": "chmod +x ./bin/deploy.sh && ./bin/deploy.sh"
