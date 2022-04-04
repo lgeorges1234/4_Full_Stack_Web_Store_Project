@@ -10,10 +10,9 @@ const { POSTGRES_HOST_DEV, POSTGRES_DB_DEV, POSTGRES_USER_DEV, POSTGRES_PASSWORD
 // eslint-disable-next-line import/no-mutable-exports
 let client = new pg_1.Pool();
 console.log(`ENV var: ${ENV}`);
-console.log(`POSTGRES_DB_TEST: ${POSTGRES_HOST_TEST}`);
-console.log(`POSTGRES_DB_DEV: ${POSTGRES_HOST_DEV}`);
+console.log(`POSTGRES_HOST_TEST: ${POSTGRES_HOST_TEST}`);
+console.log(`POSTGRES_HOST_DEV: ${POSTGRES_HOST_DEV}`);
 if (ENV === 'test') {
-    console.log(`POSTGRE_DB_TEST: ${POSTGRES_DB_TEST}`);
     client = new pg_1.Pool({
         host: POSTGRES_HOST_TEST,
         database: POSTGRES_DB_TEST,
@@ -22,7 +21,6 @@ if (ENV === 'test') {
     });
 }
 if (ENV === 'dev') {
-    console.log(`POSTGRE_DB_DEV: ${POSTGRES_DB_DEV}`);
     client = new pg_1.Pool({
         host: POSTGRES_HOST_DEV,
         database: POSTGRES_DB_DEV,
