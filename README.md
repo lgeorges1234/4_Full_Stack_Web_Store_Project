@@ -50,15 +50,8 @@ The Amazon Web Service infrastructure for the project lean on three components :
 
 ## CI/CD pipeline
 
-A pipeline process is applied to install, test and deploy frontend and backend. [Circleci](https://circleci.com/) is used, each time the code is modified on github, to order and launch the different scripts of each application.
+A pipeline process is applied to install, test and deploy frontend and backend. 
 
-1. Install backend dependencies 
-2. Build backend application
-3. Run backend tests
-4. Deploy backend application to Elastic Beanstalk
-5. Install frontend dependencies
-6. Build frontend application
-7. Run frontend tests
-8. Deploy frontend application to S3
+[Circleci](https://circleci.com/) is used, each time the code is modified on github, to order and launch the different scripts of each application.
 
 
