@@ -22,6 +22,8 @@ Each part of the application is detailed in a separate README files :
 - [Frontend README](https://github.com/lgeorges1234/4_Full_Stack_Web_Store_Project/blob/main/4_MyStore_Frontend/README.md)
 - [Backend README](https://github.com/lgeorges1234/4_Full_Stack_Web_Store_Project/blob/main/4_MyStore_Backend/README.md)
 
+---
+
 ## Links
 
 ### Frontend Link
@@ -33,6 +35,8 @@ Each part of the application is detailed in a separate README files :
 ### Database Link
 - http://mystorebdd.cffh2rvpabq7.eu-west-3.rds.amazonaws.com
 
+---
+
 ## AWS infrastructure
 
 ![AWS infrastructure](https://github.com/lgeorges1234/4_Full_Stack_Web_Store_Project/blob/main/docs/diagrams/aws.png)
@@ -42,6 +46,7 @@ The Amazon Web Service infrastructure for the project lean on three components :
 - an Elastic Beanstack environment hosting a NodeJS server
 - a RDS instance running a PostgreSQL database
 
+---
 
 ## CI/CD pipeline
 
