@@ -50,6 +50,8 @@ The Amazon Web Service infrastructure for the project lean on three components :
 
 ## CI/CD pipeline
 
+![CI/CD_pipeline](https://github.com/lgeorges1234/4_Full_Stack_Web_Store_Project/blob/main/docs/diagrams/CI_CD.png)
+
 A pipeline process is applied to install, test and deploy frontend and backend. 
 
 [Circleci](https://circleci.com/) is used, each time the code is modified on github, to order and launch the different scripts of each application : [Circleci steps](https://github.com/lgeorges1234/4_Full_Stack_Web_Store_Project/blob/main/docs/Cicrcleci.md)
