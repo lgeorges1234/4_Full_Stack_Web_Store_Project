@@ -8,8 +8,8 @@ import { Product } from 'src/app/model/Product';
   providedIn: 'root'
 })
 export class ProductsService {
-  private _productUrl = `127.0.0.1/products`;
-  // private _productUrl = `mystorebdd.cffh2rvpabq7.eu-west-3.rds.amazonaws.com/products`;
+  // private _productUrl = `127.0.0.1/products`;
+  private _productUrl = `MyStore-api-dev.eu-west-3.elasticbeanstalk.com/products`;
   private _jsonURL = 'assets/data.json';
 
   constructor(private http: HttpClient) { }
@@ -28,7 +28,7 @@ export class ProductsService {
   }
 
   getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this._jsonURL);
+    return this.http.get<Product[]>(this._productUrl);
   };
 
 };

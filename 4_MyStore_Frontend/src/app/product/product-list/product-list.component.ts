@@ -19,12 +19,11 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     // get initial products from a json files and create a product entry in the database
-    this.productsService.getInitProductsList().pipe(
-          map(products => { 
-            alert(products)
-            for(let i=0; i<products.length; i++) this.productsService.createProducts(products[i])
-          })
-    )
+    this.productsService.getInitProductsList().subscribe((initProductList:Product[]) => {
+      for (let i=0; i<initProductList.length; i++) {
+        this.productsService.createProducts(this.productsList[i])
+      }
+    })
 
     // get all products from the api
     this.productsService.getProducts().subscribe((res: any) => {
