@@ -19,7 +19,7 @@ export class ProductStore {
       conn.release();
       return indexResult.rows;
     } catch (error) {
-      throw new Error(`Could not get products. Error: ${error}`);
+      throw new Error(`Could not get productsce. Error: ${error}`);
     }
   }
 

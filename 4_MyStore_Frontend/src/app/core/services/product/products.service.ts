@@ -18,13 +18,13 @@ export class ProductsService {
     return this.http.get<Product[]>(this._jsonURL)
   }
 
-  createProducts(product: Product): Observable<Product[]> {
+  createProducts(product: Product): Observable<Product> {
     let httpHeaders = new HttpHeaders({
       'Content-Type': 'application/json',
       'Cache-Control': 'no-cache'
     });
-    alert(`Product created: ${product}`)
-    return this.http.post<Product[]>(this._productUrl, product, { headers: httpHeaders })
+    alert(`Product created: ${JSON.stringify(product)}`)
+    return this.http.post<Product>(this._productUrl, product, { headers: httpHeaders })
   }
 
   getProducts(): Observable<Product[]> {
