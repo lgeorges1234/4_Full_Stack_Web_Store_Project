@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { Product } from 'src/app/model/Product';
 
 
@@ -29,7 +28,7 @@ export class ProductsService {
   }
 
   getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this._productUrl);
+    return this.http.get<Product[]>(this._jsonURL);
   };
 
 };

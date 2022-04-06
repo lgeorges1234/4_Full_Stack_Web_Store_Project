@@ -42,7 +42,7 @@ Each part of the application is detailed in a separate README files :
 ![AWS infrastructure](https://github.com/lgeorges1234/4_Full_Stack_Web_Store_Project/blob/main/docs/diagrams/aws.png)
 
 The Amazon Web Service infrastructure for the project lean on three components :
-- a S3 buckets hosting a plublic website\
+- a S3 buckets hosting a plublic website
 - an Elastic Beanstack environment hosting a NodeJS server
 - a RDS instance running a PostgreSQL database
 
