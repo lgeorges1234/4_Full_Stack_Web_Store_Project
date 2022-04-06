@@ -49,10 +49,10 @@ jobs:
           command: |
             npm run frontend:deploy 
 
-# workflows:
-#   pipeline:
-#     jobs:
-#       - build:
-#           filters:
-#             branches:
-#               only: main
+workflows:
+  pipeline:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: main
