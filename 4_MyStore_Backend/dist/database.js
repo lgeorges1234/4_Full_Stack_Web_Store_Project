@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv_1 = __importDefault(require("dotenv"));
 const pg_1 = require("pg");
 dotenv_1.default.config();
-const { POSTGRES_HOST_DEV, POSTGRES_DB_DEV, POSTGRES_USER_DEV, POSTGRES_PASSWORD_DEV, POSTGRES_HOST_TEST, POSTGRES_DB_TEST, POSTGRES_USER_TEST, POSTGRES_PASSWORD_TEST, ENV, } = process.env;
+const { POSTGRES_HOST_DEV, POSTGRES_DB_DEV, POSTGRES_USER_DEV, POSTGRES_PASSWORD_DEV, POSTGRES_HOST_TEST, POSTGRES_DB_TEST, POSTGRES_USER_TEST, POSTGRES_PASSWORD_TEST, PORT_DEV, ENV, } = process.env;
 // eslint-disable-next-line import/no-mutable-exports
 let client = new pg_1.Pool();
 console.log(`ENV var: ${ENV}`);
@@ -22,10 +22,17 @@ if (ENV === 'test') {
 }
 if (ENV === 'dev') {
     client = new pg_1.Pool({
-        host: POSTGRES_HOST_DEV,
-        database: POSTGRES_DB_DEV,
-        user: POSTGRES_USER_DEV,
-        password: POSTGRES_PASSWORD_DEV,
+        host: "mystorebdd.cffh2rvpabq7.eu-west-3.rds.amazonaws.com",
+        database: "shopping_dev",
+        user: "shopping_user",
+        password: "cheeseball",
     });
+    // if (ENV === 'dev') {
+    //   client = new Pool({
+    //     host: POSTGRES_HOST_DEV,
+    //     database: POSTGRES_DB_DEV,
+    //     user: POSTGRES_USER_DEV,
+    //     password: POSTGRES_PASSWORD_DEV,
+    //   });
 }
 exports.default = client;

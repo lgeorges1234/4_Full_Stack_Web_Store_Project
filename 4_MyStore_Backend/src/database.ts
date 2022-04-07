@@ -33,19 +33,11 @@ if (ENV === 'test') {
 
 if (ENV === 'dev') {
   client = new Pool({
-    host: "mystorebdd.cffh2rvpabq7.eu-west-3.rds.amazonaws.com",
-    database: "shopping_dev",
-    user: "shopping_user",
-    password: "cheeseball",
+    host: POSTGRES_HOST_DEV,
+    database: POSTGRES_DB_DEV,
+    user: POSTGRES_USER_DEV,
+    password: POSTGRES_PASSWORD_DEV,
   });
-
-// if (ENV === 'dev') {
-//   client = new Pool({
-//     host: POSTGRES_HOST_DEV,
-//     database: POSTGRES_DB_DEV,
-//     user: POSTGRES_USER_DEV,
-//     password: POSTGRES_PASSWORD_DEV,
-//   });
 }
 
 export default client;
