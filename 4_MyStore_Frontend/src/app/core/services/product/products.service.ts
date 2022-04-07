@@ -9,7 +9,7 @@ import { Product } from 'src/app/model/Product';
 })
 export class ProductsService {
   // private _productUrl = `127.0.0.1/products`;
-  private _productUrl = `MyStore-api-dev.eu-west-3.elasticbeanstalk.com/products`;
+  private _productUrl = `http://MyStore-api-dev.eu-west-3.elasticbeanstalk.com/products`;
   private _jsonURL = '../../../assets/data.json';
 
   constructor(private http: HttpClient) { }
