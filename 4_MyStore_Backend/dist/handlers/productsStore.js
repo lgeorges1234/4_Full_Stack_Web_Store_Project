@@ -39,7 +39,9 @@ const create = async (req, res) => {
 };
 const destroy = async (req, res) => {
     try {
+        alert(req.params.id);
         const result = await store.delete(req.params.id);
+        alert(result);
         res.json(result);
     }
     catch (error) {
