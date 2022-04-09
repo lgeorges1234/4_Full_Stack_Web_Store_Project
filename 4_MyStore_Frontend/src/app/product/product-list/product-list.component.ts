@@ -27,8 +27,9 @@ export class ProductListComponent implements OnInit {
     // })
 
     // get all products from the api
+    
     this.productsService.getProducts().subscribe((res: Product[]) => {
-      alert(res)
+      alert(`res : ${res}`)
       this.productsList = res;
     });
     this.productsService.getProducts().subscribe((res: Product[]) => {

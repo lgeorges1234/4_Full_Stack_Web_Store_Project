@@ -23,12 +23,12 @@ export class ProductsService {
       'Content-Type': 'application/json',
       'Cache-Control': 'no-cache'
     });
-    alert(`Product created: ${JSON.stringify(product)}`)
+    // alert(`Product created: ${JSON.stringify(product)}`)
     return this.http.post<Product>(this._productUrl, product, { headers: httpHeaders })
   }
 
   getProducts(): Observable<Product[]> {
-    alert(JSON.stringify(this.http.get<[]>(this._productUrl)));
+    alert(`GetProdduct:${JSON.stringify(this.http.get<any[]>('https://jsonplaceholder.typicode.com/users'))}`);
     return this.http.get<Product[]>(this._productUrl)
   };
 
