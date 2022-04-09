@@ -27,13 +27,13 @@ Each part of the application is detailed in a separate README files :
 ## Links
 
 ### Frontend Link
-- http://webstore-frontend.s3-website.eu-west-3.amazonaws.com
+- http://webstore-front.s3-website.eu-west-3.amazonaws.com/
 
 ### API Link
-- http://MyStore-api-dev.eu-west-3.elasticbeanstalk.com/products
+- http://MyStore-api-dev.eu-west-3.elasticbeanstalk.com
 
 ### Database Link
-- http://mystorebdd.cffh2rvpabq7.eu-west-3.rds.amazonaws.com
+- http://mystorebdd.cb8vfqttgbjw.eu-west-3.rds.amazonaws.com
 
 ---
 
