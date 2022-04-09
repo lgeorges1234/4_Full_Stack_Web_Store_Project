@@ -28,7 +28,6 @@ export class ProductsService {
   }
 
   getProducts(): Observable<Product[]> {
-    alert(`GetProdduct:${JSON.stringify(this.http.get<any[]>('https://jsonplaceholder.typicode.com/users'))}`);
     return this.http.get<Product[]>(this._productUrl)
   };
 
